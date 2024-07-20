@@ -7,17 +7,17 @@
 @section('main-content')
     <h1>Welcome to the Trains Page</h1>
 
+    <ol>
+    @foreach ($trains as $train)
 
-    @foreach ($todayTrains as $train)
 
-    <ul>
         <li>
            Train {{ $train['azienda']}} from {{ $train['stazione_partenza'] }} to {{ $train['stazione_arrivo'] }} at {{ $train['orario_partenza'] }}
         </li>
-    </ul>
+
 
     @endforeach
 
-
+</ol>
 
 @endsection
